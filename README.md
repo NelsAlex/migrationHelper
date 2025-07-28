@@ -15,4 +15,4 @@ this is where i would make edits. i like how my editor highlights the changes on
 
 yeah finally, I found it to edit readme :)
 
-
+what do you think to create next? in my mind 4 steps 1- pre-migration 2- doing migration troubleshooting 3- post- migration 4-  Another troubleshooting steps. What do you think?
