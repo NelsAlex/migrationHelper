@@ -18,9 +18,8 @@ Restart the device
 
 
 Win+R 
-
 Sysdm.msc 
-
 Click startup 
-
 Find "Remote Registry" (RCP) rigth click "start"  
+
+
