@@ -16,3 +16,6 @@ this is where i would make edits. i like how my editor highlights the changes on
 yeah finally, I found it to edit readme :)
 
 what do you think to create next? in my mind 4 steps 1- pre-migration 2- doing migration troubleshooting 3- post- migration 4-  Another troubleshooting steps. What do you think?
+
+yeah. i think matt's documents could be copied over, or just uploaded for a collection of resources. he did a really good job with it and we don't need to remake it.
+additionally, i want to make a powershell script for precheck options. it can handle most of the precheck except for exporting the user's passwords.
