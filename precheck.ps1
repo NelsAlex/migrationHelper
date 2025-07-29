@@ -21,7 +21,7 @@ If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 # Enable remoteregistry
-function Enable-RemoteRegistry{
+function enableRemoteRegistry{
   Write-Host "Enabling RemoteRegistry..."
   Set-Service -Name RemoteRegistry -StartupType
   Start-Service -Name RemoteRegistry
@@ -29,22 +29,25 @@ function Enable-RemoteRegistry{
 }
 
 # Set Sleep Settings to Never
-function Set-SleepSettings {
-Write-Host "Setting sleep settings to 'never'"
-  #TODO: write sleep setting # Script: Disable-WiFi-Cellular.ps1
+function setSleepSettings {
+  Write-Host "Setting sleep settings to never..."
+  powercfg /change standby-timeout-ac 0
+  powercfg /change standby-timeout-dc 0
+  powercfg /change monitor-timeout-ac 0
+  powercfg /change monitor-timeout-dc 0
 }
 
 
 function checkLTSC{
-  #TODO write code to check windows version for migration compatibility
+  #TODO: write code to check windows version for migration compatibility
 }
 
 function disableWifiCellular{
-  #TODO Feyza, you can put your code in this block
+  #TODO: Feyza, you can put your code in this block
 }
 
 function passwordBackup{
-  #TODO launch edge and chrome directly to their password backup url pages for easy backup
+  #TODO: launch edge and chrome directly to their password backup url pages for easy backup
 }
 
 function launchOnedrive{
@@ -52,7 +55,7 @@ function launchOnedrive{
 }
 
 function printHostname{
-  #TODO output hostname to cmd
+  #TODO: output hostname to cmd
 }
 
 
