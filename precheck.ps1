@@ -34,20 +34,3 @@ function Set-SleepSettings {
 Write-Host "Setting sleep settings to 'never'"
   #TODO: write sleep setting # Script: Disable-WiFi-Cellular.ps1
 
-
-# Script: Disable-COTWiFi.ps1
-
-# Set adapter name (exact or partial match)
-$targetAdapterName = "COTWiFi"
-
-# Get the adapter with that name
-$adapter = Get-NetAdapter | Where-Object { $_.Name -like "*$targetAdapterName*" }
-
-# Disable if it's up
-if ($adapter.Status -eq "Up") {
-    Disable-NetAdapter -Name $adapter.Name -Confirm:$false
-    Write-Output "Disabled adapter: $($adapter.Name)"
-} else {
-    Write-Output "Adapter is already disabled: $($adapter.Name)"
-}ular.ps1
-
