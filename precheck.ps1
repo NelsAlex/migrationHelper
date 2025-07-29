@@ -8,9 +8,8 @@
 # #Disables wifi and cellular adapters
 # #Launches chrome/edge directly to the passwords page for export
 # #Launches onedrive for user login
+# #print full hostname to the console for contractor to verify with the smartsheet
 # #Reboot must be done manually after data has been backed up
-
-
 
 # Ensure script is run as admin
 If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
@@ -33,4 +32,29 @@ function Enable-RemoteRegistry{
 function Set-SleepSettings {
 Write-Host "Setting sleep settings to 'never'"
   #TODO: write sleep setting # Script: Disable-WiFi-Cellular.ps1
+}
+
+
+function checkLTSC{
+  #TODO write code to check windows version for migration compatibility
+}
+
+function disableWifiCellular{
+  #TODO Feyza, you can put your code in this block
+}
+
+function passwordBackup{
+  #TODO launch edge and chrome directly to their password backup url pages for easy backup
+}
+
+function launchOnedrive{
+  #is this even necessary? idk
+}
+
+function printHostname{
+  #TODO output hostname to cmd
+}
+
+
+
 
