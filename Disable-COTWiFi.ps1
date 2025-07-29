@@ -21,9 +21,6 @@ if ($adapter.Status -eq "Up") {
 }
 
 
-How to Test:
-Save as Disable-COTWiFi.ps1
-
-Run in PowerShell as Administrator
-
-Output will tell you whether it found and disabled the adapter!
+#How to Test: Save as Disable-COTWiFi.ps1
+#Run in PowerShell as Administrator
+#Output will tell you whether it found and disabled the adapter!
