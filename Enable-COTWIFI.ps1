@@ -1,6 +1,6 @@
 # Script: Enable-COTWiFi.ps1
 
-$targetAdapterName = "COTWiFi"
+$targetAdapterName = "cotwifi"
 $adapter = Get-NetAdapter | Where-Object { $_.Name -like "*$targetAdapterName*" }
 
 if ($null -eq $adapter) {
