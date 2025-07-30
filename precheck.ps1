@@ -37,18 +37,44 @@ function setSleepSettings {
   powercfg /change monitor-timeout-dc 0
 }
 
+#Checks the windows version for LTSC
+function isLTSC{
+    # Get the edition from the registry
+    $edition = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").EditionID
 
-function checkLTSC{
-  #TODO: write code to check windows version for migration compatibility
+    # Check for LTSC variants
+    if ($edition -match "LTSC|LTSB") {
+        Write-Output "LTSC Windows version discovered. Please remove from migration and reimage."
+    } else {
+        Write-Output "This is NOT an LTSC version of Windows."
+    }
 }
 
 function disableWifiCellular{
   #TODO: Feyza, you can put your code in this block
 }
 
+#Launches Chrome and Edge to the password backup pages
 function passwordBackup{
-  #TODO: launch edge and chrome directly to their password backup url pages for easy backup
-}
+  #Variables
+  $chromePath = "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe"
+  $edgePath = "${env:ProgramFiles(x86)}\Microsoft\Edge\Application\msedge.exe"
+  $passwordExportURL = "chrome://settings/passwords"
+
+  #Open browsers to correct path
+  if(Test-Path $chromePath){
+    Start-Process -FilePath $chromePath -ArgumentList $passwordExportURL
+  } else{
+    Write-Warning "Chrome not found at expected path: $chromePath"
+  }
+
+  if(Test-Path $edgePath){
+    Start-Process -FilePath $edgePath -ArgumentList $passwordExportURL
+  } else{
+    Write-Warning "Edge not found at the expected path: $edgePath"
+  }
+  }
+
 
 function launchOnedrive{
   #is this even necessary? idk
